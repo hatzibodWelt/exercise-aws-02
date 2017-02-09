@@ -9,10 +9,10 @@ AWS resources and infrastructure should always be created using a configuration 
 1. Install one AWS EC2 Linux instance using either `AWS Cloudformation` or `Terraform`.
 2. The instance must allow Internet traffic from any IP to ports `80` and `443` only.
 3. The instance must allow login via SSH, but only from a definable IP or IP range (*in CIDR notation*) and must require an AWS `Key Pair`.
-4. Inputs: The configuration code should accept two parameters:
+4. **Inputs:** The configuration code should accept two parameters:
   * The IP or IP range (*in CIDR notation*) for allowing SSH to the instance
   * The AWS Region to install the resources in
-5. Outputs: The configuration code should output the Public IP of the created EC2 instance
+5. **Outputs:** The configuration code should output the Public IP of the created EC2 instance
 6. Document how to create and how to destroy the AWS resources.
 
 ## Acceptance Criteria
