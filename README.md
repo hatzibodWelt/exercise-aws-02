@@ -1,23 +1,26 @@
-# DevOps Exercise AWS 02: Infrastructure-As-Code
+# DevOps exercise AWS 02: Infrastructure-As-Code
 
 ## Introduction
 
-AWS resources and infrastructure should always be created using a configuration system such as [Cloudformation](https://aws.amazon.com/cloudformation/) or [Terraform](https://www.terraform.io/). This ensures all created AWS resources are tracked and reproducable.  It also encourages sharing and collaboration and can help an infrastructure recover from a disaster.
+AWS resources and infrastructure should always be created using a configuration management system such as [Cloudformation](https://aws.amazon.com/cloudformation/) or [Terraform](https://www.terraform.io/). This ensures all created AWS resources are tracked and reproducable.  It also encourages sharing and collaboration and can help an infrastructure recover from a disaster.
 
 ## Exercise
 
 1. Install one AWS EC2 Linux instance using either `AWS Cloudformation` or `Terraform`.
 2. The instance must allow Internet traffic from any IP to ports `80` and `443` only.
 3. The instance must allow login via SSH, but only from a definable IP or IP range (*in CIDR notation*) and must require an AWS `Key Pair`.
-4. Document how to create and how to destroy the AWS resources.
+4. Inputs: The configuration code should accept two parameters:
+  * The IP or IP range (*in CIDR notation*) for allowing SSH to the instance
+  * The AWS Region to install the resources in
+5. Outputs: The configuration code should output the Public IP of the created EC2 instance
+6. Document how to create and how to destroy the AWS resources.
 
 ## Acceptance Criteria
 
 * The solution is completely installable using the chosen configuration management system 
 (*the key pair may be created manually and referenced by name in the configuration code*).
-* The configuration code requires two parameters (not hard-coded values):  
-  * The IP or IP range (*in CIDR notation*) for allowing SSH to the instance
-  * The AWS Region to install the resources in
+* The configuration code requires parameters `AWS Region` and `IP or IP Range` (no hard-coded values)
+* The configuration code outputs the Public IP of the created EC2 instance
 * All resources can be cleaned up (destroyed) with the chosen configuration system.
 
 ## Bonus Points!
