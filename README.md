@@ -2,7 +2,7 @@
 
 ## Introduction
 
-AWS resources and infrastructure should always be created using a configuration management system such as [Cloudformation](https://aws.amazon.com/cloudformation/) or [Terraform](https://www.terraform.io/). This ensures all created AWS resources are tracked and reproducable.  It also encourages sharing and collaboration and can help an infrastructure recover from a disaster.
+AWS resources and infrastructure should always be created using a configuration management system such as [Cloudformation](https://aws.amazon.com/cloudformation/) or [Terraform](https://www.terraform.io/). This ensures all created AWS resources are tracked and reinstallable.  It also encourages sharing and collaboration and can help an infrastructure recover from a disaster.
 
 ## Exercise
 
