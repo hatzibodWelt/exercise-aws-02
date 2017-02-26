@@ -17,8 +17,7 @@ Alternatively you can pass them as command line arguments.
  terraform destroy -var 'region=eu-west-1' -var 'ssh_whitelist=81.169.168.235/32'
  ````
  
- 
- ## Notes
+## Notes
  Docker will be pre-installed in the new VM. 
  Since no configuration management tool is being used this is done using the "User Data" feature of EC2.
  The provisioning script is in the "provision" directory.
